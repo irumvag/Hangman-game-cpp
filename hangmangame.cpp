@@ -82,6 +82,7 @@ class hangman{
             if(k==word.size())
                 {
                 cout<<"\nCongratation!!! You have won the game!!";
+                cout<<"\nThe correct word was: "<<word;
                 reset();
                 }
         }
@@ -103,8 +104,10 @@ class hangman{
         }
     }    
     void reset(){
-        if(counter==m)
+        if(counter==m){
         cout<<"\n\nYou are out of Guess!!!!\n\n";
+        cout<<"\nThe correct word was: "<<word;
+        }
         cout<<"\n\n Do you want to play again(Y/N):";
         cin>>y;
         if((y.size()==1&&isalpha(y[0]))&&(!isspace(y[0]))&&(!isdigit(y[0]))&&(y[0]=='n'||y[0]=='N')||(y[0]=='y'||y[0]=='Y'))
