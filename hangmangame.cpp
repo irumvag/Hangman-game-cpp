@@ -127,7 +127,7 @@ class hangman{
     }
     void resetvariable(){
         counter=0;
-        y='\0';
+        y='\0';//initializing
         srand(time(0));
         g=rand()%wordlist.size();
         word=wordlist[g];
